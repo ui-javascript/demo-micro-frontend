@@ -1,0 +1,163 @@
+@import "../vars";
+
+.xdh-layout {
+  &__north {
+    position: relative;
+    &.xdh-resizable--resizing {
+      transition: none;
+    }
+    padding: 0;
+    flex-shrink: 0;
+    transition: height 0.3s;
+    &.xdh-layout--split {
+      margin-bottom: 12px;
+      position: relative;
+    }
+  }
+  &__south {
+    position: relative;
+    padding: 0;
+    flex-shrink: 0;
+    transition: height 0.3s;
+    &.xdh-resizable--resizing {
+      transition: none;
+    }
+    &.xdh-layout--split {
+      margin-top: 12px;
+      position: relative;
+    }
+  }
+
+  &__west {
+    position: relative;
+    overflow: visible;
+    flex-shrink: 0;
+    transition: width 0.3s;
+    &.xdh-resizable--resizing {
+      transition: none;
+    }
+    &.xdh-layout--split {
+      margin-right: 12px;
+      position: relative;
+    }
+  }
+  &__east {
+    position: relative;
+    overflow: visible;
+    flex-shrink: 0;
+    transition: width 0.3s;
+    &.xdh-resizable--resizing {
+      transition: none;
+    }
+    &.xdh-layout--split {
+      margin-left: 12px;
+      position: relative;
+    }
+  }
+
+  &__main {
+    padding: 0;
+    position: relative;
+    overflow: visible;
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &--fixed {
+    height: 100%;
+
+    > .xdh-layout__wrapper {
+      position: relative;
+      > .xdh-layout__main {
+        overflow: auto;
+      }
+    }
+
+  }
+  &-split__north {
+    position: absolute;
+    width: 100%;
+    height: 12px;
+    left: 0;
+    bottom: -12px;
+    text-align: center;
+    font-size: 12px;
+    color: $--color-info;
+    line-height: 12px;
+    i {
+      width: 50px;
+      height: 100%;
+      background: $--color-primary-light-8;
+      cursor: pointer;
+      &:hover {
+        background: $--color-primary-light-9;
+      }
+    }
+  }
+  &-split__west {
+    width: 12px;
+    height: 100%;
+    position: absolute;
+    right: -12px;
+    top: 0;
+    font-size: 12px;
+    color: $--color-info;
+    i {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      height: 50px;
+      line-height: 50px;
+      transform: translateY(-50%);
+      background: $--color-primary-light-8;
+      cursor: pointer;
+      &:hover {
+        background: $--color-primary-light-9;
+      }
+    }
+  }
+  &-split__south {
+    width: 100%;
+    height: 12px;
+    position: absolute;
+    top: -12px;
+    left: 0;
+    font-size: 12px;
+    text-align: center;
+    color: $--color-info;
+    line-height: 12px;
+    i {
+      width: 50px;
+      height: 100%;
+      background: $--color-primary-light-8;
+      cursor: pointer;
+      &:hover {
+        background: $--color-primary-light-9;
+      }
+    }
+  }
+  &-split__east {
+    width: 12px;
+    height: 100%;
+    position: absolute;
+    left: -12px;
+    top: 0;
+    font-size: 12px;
+    color: $--color-info;
+    i {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      height: 50px;
+      line-height: 50px;
+      transform: translateY(-50%);
+      background: $--color-primary-light-8;
+      cursor: pointer;
+      &:hover {
+        background: $--color-primary-light-9;
+      }
+    }
+  }
+}

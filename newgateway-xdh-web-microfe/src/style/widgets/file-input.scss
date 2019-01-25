@@ -1,0 +1,41 @@
+.xdh-file-input {
+  display: inline-flex;
+  /deep/ .el-input-group__prepend {
+    position: initial;
+    padding: 0;
+    margin: 0;
+    width: 0;
+    border: none;
+  }
+  &__file {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    cursor: pointer;
+    opacity: 0;
+    filter: 'alpha(opacity=0)';
+  }
+  &.is-upload {
+    .xdh-file-input__browse {
+      border-radius: 0;
+    }
+    /deep/ .el-input-group__append {
+      border-right: 0;
+      border-radius: 0;
+    }
+  }
+  &__upload {
+    background-color: #f5f7fa;
+    color: #909399;
+    vertical-align: middle;
+    display: table-cell;
+    position: relative;
+    border: 1px solid #dcdfe6;
+    border-radius: 0 4px 4px 0;
+    padding: 0 20px;
+    white-space: nowrap;
+  }
+}

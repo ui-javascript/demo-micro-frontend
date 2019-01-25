@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="favicon.ico">
+  <title>XDH-WEB</title>
+  <style type="text/css">
+    html, body {
+      height: 100%;
+      padding: 0;
+      margin: 0;
+    }
+
+    #app {
+      height: 100%;
+      position: relative;
+      background: #d9ecff;
+    }
+
+    .xdh-web__init-spinner {
+      position: absolute;
+      top: calc(50% - 100px);
+      left: calc(50% - 50px);
+      width: 100px;
+      height: 100px;
+      background-color: #409eff;
+      -webkit-animation: rotateplane 1.2s infinite ease-in-out;
+      animation: rotateplane 1.2s infinite ease-in-out;
+    }
+
+    @-webkit-keyframes rotateplane {
+      0% {
+        -webkit-transform: perspective(120px)
+      }
+      50% {
+        -webkit-transform: perspective(120px) rotateY(180deg)
+      }
+      100% {
+        -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg)
+      }
+    }
+
+    @keyframes rotateplane {
+      0% {
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+      }
+      50% {
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+      }
+      100% {
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+      }
+    }
+  </style>
+</head>
+<body>
+<noscript>
+  <strong>We're sorry but app doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+</noscript>
+<!--[if lt IE 9]>
+<script>
+  window.location.href = '<%=BASE_URL%>chrome.html'
+</script>
+<![endif]-->
+<script>
+  function browserInfo() {
+    var browser = {name: 'unknown', version: 0},
+      userAgent = window.navigator.userAgent.toLowerCase(),
+      regex = /(msie|firefox|opera|chrome)\D+(\d[\d.]*)/;
+    if (regex.test(userAgent)) {
+      browser.name = RegExp.$1;
+      browser.version = parseInt(RegExp.$2)
+    }
+    return browser
+  };
+  (function () {
+    var info = browserInfo();
+    if (info.name === 'chrome' && info.version < 50) {
+      top.location.href = '<%=BASE_URL%>chrome.html'
+    }
+  })()
+
+</script>
+
+<div id="app">
+  <div class="xdh-web__init-spinner"></div>
+</div>
+<!-- built files will be auto injected -->
+</body>
+</html>

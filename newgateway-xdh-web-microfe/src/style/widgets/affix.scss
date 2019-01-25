@@ -1,0 +1,8 @@
+@import "../vars";
+
+$index-affix: $--index-top;
+
+.xdh-affix {
+  position: fixed;
+  z-index: $index-affix;
+}

@@ -1,0 +1,115 @@
+@import "../vars";
+
+.xdh-validate {
+  &--right {
+    .el-form-item__error {
+      left: initial;
+      right: -10px;
+      top: 50%;
+      transform: translate(100%, -50%);
+      background: $--color-warning-lighter;
+      padding: 8px 10px;
+      border-radius: $--border-radius-base;
+      &::after {
+        content: '';
+        position: absolute;
+        border-style: dashed solid dashed dashed;
+        border-color: transparent $--color-warning-lighter transparent transparent;
+        border-width: 5px;
+        width: 0;
+        height: 0;
+        left: -10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    .el-form-item__error--inline {
+      position: relative;
+      left: auto;
+      right: auto;
+      transform: none;
+    }
+    .el-checkbox-group, .el-radio-group {
+      display: inline-block;
+    }
+  }
+  &--right-inside {
+    .el-form-item__error {
+      left: initial;
+      right: 0;
+      transform: translate(0%, -50%);
+      background: none; 
+      top: 50%; 
+      padding: 8px 10px;
+      border-radius: $--border-radius-base;
+      &::after {
+        content: '';
+        position: absolute;
+        border-style: dashed solid dashed dashed;
+        border-color: transparent $--color-warning-lighter transparent transparent;
+        border-width: 5px;
+        width: 0;
+        height: 0;
+        left: -10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    .el-form-item__error--inline {
+      position: relative;
+      left: auto;
+      right: auto;
+      transform: none;
+    }
+    .el-checkbox-group, .el-radio-group {
+      display: inline-block;
+    }
+  }
+  &--top {
+    .el-form-item__error {
+      left: 0;
+      top: -10px;
+      transform: translateY(-100%);
+      background: $--color-warning-lighter;
+      padding: 8px 10px;
+      border-radius: $--border-radius-base;
+      &::after {
+        content: '';
+        position: absolute;
+        border-style: solid dashed dashed dashed;
+        border-width: 5px;
+        border-color: $--color-warning-lighter transparent transparent transparent;
+        width: 0;
+        height: 0;
+        left: 10px;
+        top: initial;
+        bottom: -10px;
+      }
+    }
+
+  }
+  &--bottom {
+    .el-form-item__error {
+      left: 0;
+      top: initial;
+      bottom: -10px;
+      transform: translateY(100%);
+      background: $--color-warning-lighter;
+      padding: 8px 10px;
+      border-radius: $--border-radius-base;
+      &::after {
+        content: '';
+        position: absolute;
+        border-style: dashed dashed solid dashed;
+        border-width: 5px;
+        border-color: transparent transparent $--color-warning-lighter transparent;
+        width: 0;
+        height: 0;
+        left: 10px;
+        top: 0;
+        transform: translateY(-100%);
+      }
+    }
+
+  }
+}

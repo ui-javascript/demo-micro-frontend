@@ -1,0 +1,146 @@
+@import "../../src/style/vars";
+
+$--defalut-color: $--color-primary;
+$--defalut-color-danger: $--color-danger;
+
+.xdh-login {
+  background: url('./images/login.jpg') no-repeat center center/cover;
+  height: 100%;
+  width: 100%;
+  min-width: 600px;
+  min-height: 600px;
+  position: relative;
+  &__card {
+    width: calc(400px - 2.5rem);
+    padding: 1.25rem;
+    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: rgba(255, 255, 255, .9);
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    /deep/ {
+      .el-input__inner {
+        background-clip: padding-box;
+        background-color: rgba(0, 0, 0, 0);
+        background-position: center bottom, center bottom;
+        background-repeat: no-repeat;
+        background-size: 0 2px, 100% 1px;
+        transition: background 0s ease-out 0s;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        background-image: linear-gradient($--defalut-color, $--defalut-color), linear-gradient(#d9d9d9, #d9d9d9);
+        text-indent: 1rem;
+        font-size: 18px;
+        color: $--color-text-regular;
+        &:focus {
+          background-image: -webkit-linear-gradient($--defalut-color, $--defalut-color), -webkit-linear-gradient(#d9d9d9, #d9d9d9);
+          background-image: -o-linear-gradient($--defalut-color, $--defalut-color), -o-linear-gradient(#d9d9d9, #d9d9d9);
+          background-image: linear-gradient($--defalut-color, $--defalut-color), linear-gradient(#d9d9d9, #d9d9d9);
+          box-shadow: none;
+          float: none;
+          background-size: 100% 2px, 100% 1px;
+          outline: 0 none;
+          transition-duration: 0.3s;
+        }
+        &::placeholder {
+          font-size: 18px;
+          color: $--color-text-secondary;
+        }
+      }
+      .xdh-validate--right.is-error {
+        .el-form-item__error {
+          right: 100px;
+        }
+        .el-input__inner {
+          background-image: linear-gradient(#009efb, #009efb), linear-gradient($--defalut-color-danger, $--defalut-color-danger);
+          &:focus {
+            background-image: -webkit-linear-gradient($--defalut-color-danger, $--defalut-color-danger), -webkit-linear-gradient(#d9d9d9, #d9d9d9);
+            background-image: -o-linear-gradient($--defalut-color-danger, $--defalut-color-danger), -o-linear-gradient(#d9d9d9, #d9d9d9);
+            background-image: linear-gradient($--defalut-color-danger, $--defalut-color-danger), linear-gradient($--defalut-color-danger, $--defalut-color-danger);
+          }
+        }
+      }
+      .el-button {
+        font-size: 18px;
+      }
+      .el-button--primary {
+        background-color: $--defalut-color;
+        border-color: $--defalut-color;
+      }
+    }
+    &--dark {
+      background: rgba(0, 0, 0, 0.6);
+      /deep/ {
+        .el-input__inner {
+          color: $--color-info-lighter;
+        }
+      }
+      .xdh-login {
+        &__header {
+          color: $--color-info-lighter;
+        }
+        &__footer {
+          color: $--color-text-regular;
+        }
+      }
+    }
+    &--left, &--right {
+      left: 0;
+      top: 0;
+      height: calc(100% - 2.5rem);
+      border: none;
+      transform: none;
+      /deep/ .el-form {
+        margin: 10% 0;
+      }
+      .xdh-login__footer {
+        position: absolute;
+        bottom: 3%;
+        width: calc(100% - 2.5rem);
+      }
+    }
+    &--right {
+      right: 0;
+      left: auto;
+    }
+  }
+  &__header {
+    margin: 1em 0 1.7em 0;
+    &--logo {
+      height: 60px;
+      text-align: center;
+      margin-bottom: 10px;
+      > img {
+        height: 100%;
+      }
+    }
+    &--title {
+      text-align: center;
+      margin-left: 0;
+      line-height: 1.2;
+      display: block;
+      h1 {
+        font-size: 2em;
+        font-weight: bold;
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em;
+      }
+    }
+  }
+  &__footer {
+    text-align: center;
+    margin-top: 10%;
+    color: $--color-text-secondary;
+  }
+}

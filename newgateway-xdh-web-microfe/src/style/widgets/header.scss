@@ -1,0 +1,207 @@
+@import "../vars";
+
+.xdh-header {
+  height: 60px;
+  background-color: $--color-primary;
+  color: $--color-white;
+  clear: both;
+  padding: 0 10px;
+  &__rightwrapper {
+    float: right;
+    height: 100%;
+    > div {
+      display: inline-block;
+      vertical-align: top;
+      height: 100%;
+    }
+  }
+  &.is-large {
+    height: 80px;
+    .xdh-header__title {
+      font-size: 30px;
+      line-height: 80px;
+    }
+    .xdh-header__search {
+      padding-top: 20px;
+    }
+    .el-menu-item, .el-menu .el-submenu__title {
+      height: 80px !important;
+      line-height: 80px !important;
+      font-size: 16px;
+    }
+    .header-user__info {
+      height: 80px;
+      line-height: 80px;
+      font-size: 16px;
+    }
+    .header-tool-item.is-inline {
+      margin-top: 0;
+      line-height: 80px;
+      font-size: 16px;
+      > i {
+        margin-top: 18px;
+        font-size: 16px;
+      }
+    }
+    .header-tool-item > i {
+      margin-top: 18px;
+      font-size: 25px;
+    }
+  }
+  &.is-small {
+    height: 50px;
+    .xdh-header__title {
+      font-size: 20px;
+      line-height: 50px;
+    }
+    .xdh-header__search {
+      padding-top: 10px;
+    }
+    .el-menu-item, .el-menu .el-submenu__title {
+      height: 50px !important;
+      line-height: 50px !important;
+    }
+    .header-user__info {
+      height: 50px;
+      line-height: 50px;
+      font-size: 14px;
+    }
+    .header-tool-item.is-inline {
+      margin-top: 0;
+      line-height: 50px;
+
+    }
+    .header-tool-item > i {
+      margin-top: 3px;
+    }
+  }
+  > div {
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+  }
+  &__logo {
+    padding-left: 10px;
+    img {
+      height: 60%;
+      display: inline-block;
+      margin-top: 30%;
+    }
+  }
+  &__title {
+    font-size: 26px;
+    line-height: 60px;
+    padding-left: 5px;
+  }
+  &__search {
+    margin-left: 30px;
+    padding-top: 10px;
+    .el-select > .el-input {
+      min-width: 105px;
+    }
+
+    .el-input__inner {
+      background: $--color-primary-light-8;
+      color: $--color-primary;
+      border-color: $--color-primary-light-4;
+      &:focus {
+        border-color: $--color-primary-light-5;
+        outline: none;
+      }
+    }
+
+    input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+      color: $--color-primary-light-2;
+    }
+
+    .el-input-group__append, .el-input-group__prepend {
+      background: $--color-primary-light-5;
+      color: $--color-primary;
+      border-color: $--color-primary-light-4;
+    }
+
+  }
+
+  &__nav {
+    margin-left: 30px;
+    .xdh-menu {
+      background-color: transparent;
+      > .el-menu-item, > .el-menu-item i, > .el-submenu > .el-submenu__title, > .el-submenu i {
+        color: $--color-primary-light-8;
+      }
+      > .el-menu-item.is-active, .el-submenu.is-active > .el-submenu__title {
+        color: $--color-primary-light-8;
+        background-color: $--color-primary-light-3 !important;
+        border-bottom-width: 0;
+      }
+      > .el-menu-item:hover, > .el-menu-item:focus,
+      > .el-submenu > .el-submenu__title:hover,
+      > .el-submenu:focus > .el-submenu__title {
+        background-color: $--color-primary-light-3 !important;
+        color: $--color-white !important;
+      }
+
+    }
+  }
+  &__popper {
+    .el-menu {
+      background-color: $--color-primary !important;
+    }
+    .el-menu-item, .el-menu .el-submenu__title {
+      background-color: $--color-primary !important;
+      color: $--color-primary-light-6 !important;
+      i {
+        color: $--color-primary-light-6 !important;
+      }
+      &:hover {
+        background-color: $--color-primary-light-3 !important;
+      }
+    }
+    .el-menu-item.is-active, .el-submenu.is-active > .el-submenu__title {
+      color: $--color-white !important;
+    }
+
+  }
+  &__user {
+    font-size: 14px;
+    .header-user__info {
+      height: 60px;
+      line-height: 60px;
+      padding: 0 15px;
+      i {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &__tool {
+    margin-left: 30px;
+  }
+
+  .header-tool-item {
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
+    padding: 0 15px;
+    cursor: pointer;
+    font-size: 12px;
+    text-align: center;
+    i {
+      font-size: 25px;
+      display: block;
+      margin-top: 8px;
+    }
+    &:hover {
+      background-color: $--color-primary-light-3;
+    }
+    &.is-inline {
+      line-height: 60px;
+      font-size: 14px;
+      i {
+        font-size: 14px;
+        display: inline;
+      }
+    }
+  }
+
+}

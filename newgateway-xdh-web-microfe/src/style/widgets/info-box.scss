@@ -1,0 +1,237 @@
+@import "../vars";
+
+.xdh-info-box {
+  background: #fff;
+  color: rgba(0, 0, 0, .6);
+  &__icon {
+    transition: all .3s linear;
+    border-radius: .25rem;
+    display: flex;
+    width: 70px;
+    text-align: center;
+    font-size: 45px;
+    background: $--color-primary;
+    justify-content: center !important;
+    align-items: center !important;
+    box-sizing: border-box;
+    color: rgba(255, 255, 255, .5);
+    i {
+      transition: all .3s linear;
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      &.iconfont {
+        font-size: 45px;
+      }
+    }
+  }
+  &__content {
+    padding: 5px 10px;
+    flex: 1;
+  }
+  &__text {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: rgba(0, 0, 0, .5);
+  }
+  &__number {
+    display: block;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.1;
+  }
+  &__bg {
+    &--success .xdh-info-box__icon {
+      background: $--color-success;
+    }
+    &--warning .xdh-info-box__icon {
+      background: $--color-warning;
+    }
+    &--danger .xdh-info-box__icon {
+      background: $--color-danger;
+    }
+    &--info .xdh-info-box__icon {
+      background: $--color-info;
+    }
+  }
+  &__background {
+    background: $--color-primary;
+    color: rgba(255, 255, 255, .8);
+    .xdh-info-box__icon {
+      background: transparent;
+      font-size: 55px;
+      i.iconfont {
+        font-size: 55px;
+      }
+    }
+    .xdh-info-box__text {
+      color: rgba(255, 255, 255, .6);
+    }
+    &.xdh-info-box__bg {
+      &--success {
+        background: $--color-success;
+      }
+      &--warning {
+        background: $--color-warning;
+      }
+      &--danger {
+        background: $--color-danger;
+      }
+      &--info {
+        background: $--color-info;
+      }
+    }
+  }
+  &__smallbox {
+    border-radius: .25rem;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .125), 0 1px 3px rgba(0, 0, 0, .2);
+    position: relative;
+    display: block;
+    background: $--color-primary;
+    color: #ffffff;
+    .el-card__body {
+      display: block !important;
+      padding: 0 !important;
+    }
+    &.xdh-info-box__bg {
+      &--success {
+        background: $--color-success;
+      }
+      &--warning {
+        background: $--color-warning;
+      }
+      &--danger {
+        background: $--color-danger;
+      }
+      &--info {
+        background: $--color-info;
+      }
+    }
+    .xdh-info-box {
+      &__inner {
+        padding: 10px;
+        h3, h3 > div {
+          font-size: 38px;
+          font-weight: 700;
+          margin: 0 0 10px 0;
+          white-space: nowrap;
+          padding: 0;
+          line-height: 1.2;
+          color: rgba(255, 255, 255, .8);
+        }
+        p {
+          font-size: 15px;
+          margin-top: 0;
+          margin-bottom: 1rem;
+          color: rgba(255, 255, 255, .6);
+        }
+      }
+      &__icon--one {
+        transition: all .3s linear;
+        position: absolute;
+        top: -10px;
+        right: 10px;
+        z-index: 0;
+        font-size: 90px;
+        color: rgba(0, 0, 0, .15);
+        line-height: 1.5;
+        i {
+          display: inline-block;
+          font: normal normal normal 14px/1 FontAwesome;
+          font-size: inherit;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+        }
+      }
+      &__footer {
+        position: relative;
+        text-align: center;
+        padding: 3px 0;
+        color: #fff;
+        color: rgba(255, 255, 255, .8);
+        display: block;
+        z-index: 10;
+        background: rgba(0, 0, 0, .1);
+        text-decoration: none;
+      }
+    }
+    &:hover .xdh-info-box__icon--one {
+      font-size: 100px
+    }
+  }
+  &.is-gradient {
+    .xdh-info-box__icon {
+      background: $--color-primary;
+      background: -webkit-gradient(linear, left bottom, left top, color-stop(0, $--color-primary), color-stop(1, $--color-primary-light-3));
+    }
+    &.xdh-info-box {
+      &__bg {
+        &--success .xdh-info-box__icon {
+          background: $--color-success;
+          background: -webkit-gradient(linear, left bottom, left top, color-stop(0, $--color-success), color-stop(1, mix($--color-white, $--color-success, 30%)));
+        }
+        &--warning .xdh-info-box__icon {
+          background: $--color-warning;
+          background: -webkit-gradient(linear, left bottom, left top, color-stop(0, $--color-warning), color-stop(1, mix($--color-white, $--color-warning, 30%)));
+        }
+        &--danger .xdh-info-box__icon {
+          background: $--color-danger;
+          background: -webkit-gradient(linear, left bottom, left top, color-stop(0, $--color-danger), color-stop(1, mix($--color-white, $--color-danger, 30%)));
+        }
+        &--info .xdh-info-box__icon {
+          background: $--color-info;
+          background: -webkit-gradient(linear, left bottom, left top, color-stop(0, $--color-info), color-stop(1, mix($--color-white, $--color-info, 30%)));
+        }
+      }
+      &__background, &.xdh-info-box__smallbox {
+        background: $--color-primary;
+        background: -webkit-gradient(linear, left bottom, left top, color-stop(0, $--color-primary), color-stop(1, $--color-primary-light-3));
+        color: #ffffff;
+        .xdh-info-box__icon {
+          background: transparent;
+        }
+        &.xdh-info-box__bg {
+          &--success {
+            background: $--color-success;
+            background: -webkit-gradient(linear, left bottom, left top, color-stop(0, $--color-success), color-stop(1, mix($--color-white, $--color-success, 30%)));
+          }
+          &--warning {
+            background: $--color-warning;
+            background: -webkit-gradient(linear, left bottom, left top, color-stop(0, $--color-warning), color-stop(1, mix($--color-white, $--color-warning, 30%)));
+          }
+          &--danger {
+            background: $--color-danger;
+            background: -webkit-gradient(linear, left bottom, left top, color-stop(0, $--color-danger), color-stop(1, mix($--color-white, $--color-danger, 30%)));
+          }
+          &--info {
+            background: $--color-info;
+            background: -webkit-gradient(linear, left bottom, left top, color-stop(0, $--color-info), color-stop(1, mix($--color-white, $--color-info, 30%)));
+          }
+        }
+      }
+    }
+  }
+  &.click {
+    cursor: pointer;
+    &.xdh-info-box:hover {
+      .xdh-info-box__icon {
+        font-size: 50px;
+        i.iconfont {
+          font-size: 50px;
+        }
+      }
+      &.xdh-info-box__background {
+        .xdh-info-box__icon {
+          font-size: 60px;
+          i.iconfont {
+            font-size: 60px;
+          }
+        }
+      }
+    }
+  }
+}

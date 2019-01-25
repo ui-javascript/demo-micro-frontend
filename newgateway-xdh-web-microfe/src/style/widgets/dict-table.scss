@@ -1,0 +1,34 @@
+@import "../vars";
+
+.xdh-dict-table {
+  border-collapse: collapse;
+  &.is-label-left th {
+    text-align: left;
+  }
+  &.is-label-right th {
+    text-align: right;
+  }
+  &.is-label-center th {
+    text-align: center;
+  }
+
+  &.is-value-left td {
+    text-align: left;
+  }
+  &.is-value-right td {
+    text-align: right;
+  }
+  &.is-value-center td {
+    text-align: center;
+  }
+
+  &__label {
+    padding: 8px;
+    background: $--background-color-base;
+    border: 1px solid $--border-color-base;
+  }
+  &__value {
+    padding: 8px;
+    border: 1px solid $--border-color-base;
+  }
+}

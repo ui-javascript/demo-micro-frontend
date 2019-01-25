@@ -1,0 +1,19 @@
+@import "../vars";
+
+.xdh-breadcrumb {
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+
+  &.is-background {
+    background: $--color-primary-light-9;
+  }
+
+  .el-breadcrumb {
+    line-height: 30px;
+  }
+
+  &__tool {
+    float: right;
+  }
+}

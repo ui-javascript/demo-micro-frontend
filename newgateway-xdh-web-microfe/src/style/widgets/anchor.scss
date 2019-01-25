@@ -1,0 +1,103 @@
+@import "../vars";
+
+.xdh-anchor {
+  background: $--background-color-base;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  &__item {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    cursor: pointer;
+    position: relative;
+    &:hover {
+      background: $--color-primary-light-9;
+      &::after {
+        background: $--color-primary-light-5;
+      }
+    }
+    &::before {
+      content: '';
+      border-left: 3px solid $--border-color-base;
+      height: 40px;
+      width: 10px;
+      margin-left: 5px;
+      float: left;
+    }
+    &::after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background: $--border-color-base;
+      border-radius: 50%;
+      display: inline-block;
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &.is-active {
+      background: $--color-primary-light-8;
+      &::after {
+        background: $--color-primary;
+      }
+    }
+  }
+
+  &__start {
+    height: 20px;
+    padding: 0 10px;
+    position: relative;
+    &::before {
+      content: '';
+      border-left: 3px solid $--border-color-base;
+      height: 20px;
+      width: 10px;
+      margin-left: 5px;
+      float: left;
+    }
+    &::after {
+      content: '';
+      width: 0;
+      height: 0;
+      font-size: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 8px solid $--border-color-base;
+      display: inline-block;
+      position: absolute;
+      left: 8px;
+      top: 0;
+    }
+  }
+
+  &__end {
+    height: 20px;
+    padding: 0 10px;
+    position: relative;
+    &::before {
+      content: '';
+      border-left: 3px solid $--border-color-base;
+      height: 20px;
+      width: 10px;
+      margin-left: 5px;
+      float: left;
+    }
+    &::after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background: $--border-color-base;
+      display: inline-block;
+      position: absolute;
+      left: 10px;
+      bottom: 0;
+    }
+  }
+}

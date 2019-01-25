@@ -1,0 +1,25 @@
+/docs/
+/public/
+/src/base/
+/src/utils/console.js
+/src/widgets/xdh-editor/ckeditor/
+/src/widgets/xdh-tag-canvas/tagcanvas.js
+/src/widgets/xdh-echarts/extension/
+/tests/coverage
+/src/assets/
+/src/utils/supermap/
+/ckeditor/
+
+
+## vue/require-prop-type-constructor 或 vue/no-use-v-if-with-v-for 校验错误，暂时关闭
+#/src/widgets/xdh-combo
+#/src/widgets/xdh-dialog
+#/src/widgets/xdh-dialog-form
+#/src/widgets/xdh-form
+#/src/widgets/xdh-icon-picker
+#/src/widgets/xdh-select
+#/src/widgets/xdh-slide-panel
+#/src/widgets/xdh-table
+#/src/widgets/xdh-tree
+#/src/widgets/xdh-tree-select
+#/src/widgets/xdh-tree-table

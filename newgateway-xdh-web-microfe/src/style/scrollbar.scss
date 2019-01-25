@@ -1,0 +1,20 @@
+$--size: 8px;
+
+// 定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸
+::-webkit-scrollbar {
+  width: $--size;
+  height: $--size;
+  background-color: transparent;
+}
+
+// 定义滚动条轨道 内阴影+圆角
+::-webkit-scrollbar-track {
+  border-radius: $--size/2;
+  background-color: transparent;
+}
+
+// 定义滑块 内阴影+圆角
+::-webkit-scrollbar-thumb {
+  border-radius: $--size/2;
+  background-color: rgba(0, 0, 0, .3)
+}

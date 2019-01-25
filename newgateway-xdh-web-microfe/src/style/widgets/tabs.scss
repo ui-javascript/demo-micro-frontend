@@ -1,0 +1,34 @@
+@import "../vars";
+
+.xdh-tabs {
+  &__tools {
+    float: right;
+    margin: 9px;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 12px;
+  }
+  .el-tabs__nav {
+    min-width: 50px;
+    min-height: 39px;
+  }
+  .sortable-drag {
+    background: #fff;
+  }
+  .sortable-ghost {
+    background: $--color-warning-light;
+    opacity: 0.3;
+  }
+}
+
+.xdh-tabs__clone {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff !important;
+  text-align: center;
+  min-width: 60px;
+  min-height: 30px;
+  border-radius: $--border-radius-base;
+  i, span {
+    display: none;
+  }
+}

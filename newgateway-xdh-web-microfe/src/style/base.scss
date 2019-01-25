@@ -1,0 +1,47 @@
+@import "mixin";
+@import "vars";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: $--font-family;
+  color: $--color-text-primary;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
+a {
+  text-decoration: none;
+  color: $--link-color;
+
+  &:hover {
+    text-decoration: none;
+    color: $--link-hover-color;
+  }
+}
+
+.app-init {
+  height: 100%;
+}
+
+.el-button .iconfont {
+  font-size: inherit;
+}
+
+/* common */
+.pull-left {
+  float: left;
+  display: inline;
+}
+
+.pull-right {
+  float: right;
+  display: inline;
+}
+
+.clearfix {
+  @include clearfix;
+}

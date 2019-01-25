@@ -1,0 +1,10 @@
+@import "../vars";
+
+.xdh-highlight {
+  &__keyword {
+    background-color: $--color-primary-light-1;
+    color: $--color-white;
+    padding: 0 5px;
+    border-radius: 3px;
+  }
+}

@@ -1,0 +1,105 @@
+@import "../vars";
+@import "../mixin";
+
+.xdh-skeleton {
+  display: table;
+  width: 100%;
+  &-header {
+    display: table-cell;
+    vertical-align: top;
+    padding-right: 16px;
+  }
+  &-content {
+    display: table-cell;
+    vertical-align: top;
+    width: 100%;
+  }
+  &-avatar {
+    display: inline-block;
+    vertical-align: top;
+    background: $--background-color-base;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    &-large {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+    }
+    &-small {
+      width: 24px;
+      height: 24px;
+      line-height: 24px;
+    }
+    &-circle {
+      border-radius: 50%;
+    }
+  }
+  &-title {
+    padding: 0;
+    margin: 16px 0 0;
+    height: 16px;
+    width: 100%;
+    background: $--background-color-base;
+  }
+  &-paragraph {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    > li {
+      height: 16px;
+      background: $--background-color-base;
+      list-style: none;
+      width: 100%;
+      & + li {
+        margin-top: 16px;
+      }
+    }
+  }
+  &-active {
+    .xdh-skeleton-avatar,
+    .xdh-skeleton-title,
+    .xdh-skeleton-paragraph > li {
+      background: linear-gradient(125deg, $--background-color-base 25%, $--border-color-base 37%, $--background-color-base 63%);
+      animation: xdh-skeleton-loading 1.4s ease infinite;
+      background-size: 400% 100%;
+    }
+  }
+}
+
+.xdh-skeleton-with-avatar .xdh-skeleton-content .xdh-skeleton-title {
+  margin-top: 8px;
+  &.xdh-skeleton-title {
+    &-large {
+      margin-top: 12px;
+    }
+    &-small {
+      margin-top: 4px;
+    }
+  }
+  & + .xdh-skeleton-paragraph {
+    margin-top: 28px;
+  }
+}
+
+.xdh-skeleton-content .xdh-skeleton-title + .xdh-skeleton-paragraph {
+  margin-top: 24px;
+}
+
+@-webkit-keyframes xdh-skeleton-loading {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@keyframes xdh-skeleton-loading {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}

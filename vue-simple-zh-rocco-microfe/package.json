@@ -1,0 +1,19 @@
+{
+  "name": "vue-simple-micro-frontends",
+  "version": "2.1.0",
+  "scripts": {
+    "install": "bash ./install.sh",
+    "serve": "node ./serve.js",
+    "build": "bash ./build.sh",
+    "build:serve": "npm run build && npm run serve",
+    "build:demo": "rimraf docs && npm run build && node ./copy.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "connect-timeout": "^1.9.0",
+    "express": "^4.16.4",
+    "recursive-copy": "^2.0.9",
+    "rimraf": "^2.6.2"
+  },
+  "license": "MIT"
+}

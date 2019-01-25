@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>更新浏览器</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: "微软雅黑", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #666;
+      min-width: 1000px;
+      min-height: 600px;
+      background: url(img/upgrade_bg.jpg);
+      background-size: cover;
+    }
+
+    h3, p {
+      margin: 0;
+      padding: 0;
+    }
+
+    .browser-upgrade {
+      height: 100%;
+      position: relative;
+    }
+
+    .browser-upgrade__inner {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 50%;
+      font-size: 24px;
+      line-height: 1.5em;
+    }
+
+    h3 {
+      color: #003366;
+      padding-bottom: 40px;
+      font-size: 36px;
+    }
+
+    .btn a {
+      display: inline-block;
+      border-radius: 25px;
+      padding: 12px 23px;
+      color: #fff;
+      background: #409eff;
+      cursor: pointer;
+      margin-top: 40px;
+      text-decoration: none;
+    }
+
+    .btn a:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+<div class="browser-upgrade">
+  <div class="browser-upgrade__inner">
+    <h3>您的浏览器已经过时了! </h3>
+    <p>为了更好的体验，建议更换Chrome浏览器。</p>
+    <div class="btn"><a href="/chrome/ChromeStandalone_60.0.3112.90_Setup.exe">下载新版Chrome浏览器</a></div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+// 清除浮动
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// 单行位置省略号， `$substract`单位为%
+@mixin ellipsis($substract: 0) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100% - $substract;
+}
+
+// 圆角
+@mixin rounded($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// 阴影
+@mixin shadow($x, $y, $blur, $color) {
+  -webkit-box-shadow: $x $y $blur $color;
+  -moz-box-shadow: $x $y $blur $color;
+  box-shadow: $x $y $blur $color;
+}
+
+// 内阴影
+@mixin shadow-inset($x, $y, $blur, $color) {
+  -webkit-box-shadow: inset $x $y $blur $color;
+  -moz-box-shadow: inset $x $y $blur $color;
+  box-shadow: inset $x $y $blur $color;
+}
+
+// 过渡动画
+@mixin transition($property) {
+  -webkit-transition: $property .2s ease;
+  -moz-transition: $property .2s ease;
+  -o-transition: $property .2s ease;
+  transition: $property .2s ease;
+}
+
+@mixin box-sizing {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+// 线性渐变背景色
+@mixin linear-gradient($from, $to) {
+  /* Fallback for sad browsers */
+  background-color: $to;
+  /* Mozilla Firefox */
+  background-image: -moz-linear-gradient($from, $to);
+  /* Opera */
+  background-image: -o-linear-gradient($from, $to);
+  /* WebKit (Safari 4+, Chrome 1+) */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, $from), color-stop(1, $to));
+  /* WebKit (Chrome 11+) */
+  background-image: -webkit-linear-gradient($from, $to);
+  /* IE10 */
+  background-image: -ms-linear-gradient($from, $to);
+  /* W3C */
+  background-image: linear-gradient($from, $to);
+}
+
+@mixin inline-block {
+  display: inline-block;
+  vertical-align: top;
+}
+
+// 虚线树组件 的 自定义indent（缩进）样式调整
+@mixin tree-indent( $indent) {
+  .el-tree {
+    div[role=group]{
+      .el-tree-node__expand-icon::after {
+        content: '';
+        width: $indent - 6px;//calc(12px + 48px - 18px);
+        left: $indent * -1 + 12px; //calc( 48px * -1 + 12px );
+      }
+    }
+  }
+}
+

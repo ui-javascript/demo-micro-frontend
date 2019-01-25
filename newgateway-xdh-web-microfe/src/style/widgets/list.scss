@@ -1,0 +1,40 @@
+$xdhList: '.xdh-list';
+
+//@alert-prefix-cls: ~"@{css-prefix}alert";
+
+#{$xdhList} {
+  * {
+    box-sizing: border-box;
+  }
+  /*显示边框*/
+  &--bordered {
+    border-radius: 4px;
+    border: 1px solid #d9d9d9;
+  }
+
+  &__item {
+    @at-root #{$xdhList}--split & {
+      border-bottom: 1px solid #e8e8e8;
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    @at-root #{$xdhList}--mini & {
+      padding: 8px 16px;
+    }
+
+    @at-root #{$xdhList}--small & {
+      padding: 12px 24px;
+    }
+
+    @at-root #{$xdhList}--medium & {
+      padding: 16px 24px;
+    }
+
+    @at-root #{$xdhList}--horizontal & {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}
