@@ -26,6 +26,7 @@
     ]
   },
   "scripts": {
+    "install:tyarn": "tyarn install",
     "build": "npm run clean && lerna exec -- npm run build",
     "clean": "lerna run clean --parallel",
     "cleanCov": "rimraf @coverage",
