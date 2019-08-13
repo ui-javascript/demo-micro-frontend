@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "install:yarn": "yarn install",
+    "install:tyarn": "tyarn install",
+    "remove": "rimraf node_modules",
     "clean:dist": "rimraf dist",
     "start": "run-s clean:dist build:microfrontends start:dev",
     "start:dev": "webpack-dev-server --env.development --progress --open",
