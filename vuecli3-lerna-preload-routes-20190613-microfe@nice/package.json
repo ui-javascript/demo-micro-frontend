@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "start": "yarn && lerna exec --stream -- yarn",
-    "install": "npm run start",
+    "install": "lerna bootstrap",
     "clean": "lerna clean --yes && rm -rf node_modules",
     "serve": "lerna run serve --parallel",
     "build": "lerna run build --parallel",
