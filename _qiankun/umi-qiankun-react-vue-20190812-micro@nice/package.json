@@ -8,7 +8,7 @@
   "sideEffects": false,
   "scripts": {
     "install:tyarn": "tyarn install",
-    "install:examples": "npm run build && cd examples/main && npm i && cd ../react16 && npm i && cd ../react15 && npm i && cd ../vue && npm i",
+    "install:examples": "npm run build && cd examples/main && tyarn install && cd ../react16 && tyarn install && cd ../react15 && tyarn install && cd ../vue && tyarn install",
     "start": "npm run start:main & npm run start:react16 & npm run start:react15 & npm run start:vue",
     "start:main": "cd examples/main && npm start",
     "start:react16": "cd examples/react16 && npm start",
