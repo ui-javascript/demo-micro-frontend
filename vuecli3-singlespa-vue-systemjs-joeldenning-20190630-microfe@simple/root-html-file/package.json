@@ -1,0 +1,10 @@
+{
+  "name": "root-html-file",
+  "scripts": {
+    "install:tyarn": "tyarn install",
+    "serve": "serve -s -l 5000"
+  },
+  "devDependencies": {
+    "serve": "^11.1.0"
+  }
+}
