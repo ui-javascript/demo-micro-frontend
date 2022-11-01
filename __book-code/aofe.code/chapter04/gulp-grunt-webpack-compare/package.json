@@ -16,7 +16,7 @@
     "grunt": "^1.0.3",
     "grunt-contrib-cssmin": "^2.2.1",
     "grunt-contrib-sass": "^1.0.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-minify-css": "^1.2.4",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.1",
